@@ -26,7 +26,7 @@ const SignUp = () => {
 
 
       try{
-        const response =await axios.post(`http://localhost:3000/signup`,{email,password})
+        const response =await axios.post(`https://login-backend-2-w8d4.onrender.com/signup`,{email,password})
 
       if(response.status === 201)
       {
