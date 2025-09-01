@@ -3,20 +3,21 @@ const cors = require("cors")
 
 const app=express()
 
-const allowedOrigins = [ 'https://your-frontend-domain.onrender.com' ];
+// const allowedOrigins = [ 'https://your-frontend-domain.onrender.com' ];
 
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-    callback(new Error('Not allowed by CORS'));
-  },
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization'],
-  credentials: true
-}))
+// app.use(cors({
+//   origin: (origin, callback) => {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       return callback(null, true);
+//     }
+//     callback(new Error('Not allowed by CORS'));
+//   },
+//   methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+//   allowedHeaders: ['Content-Type','Authorization'],
+//   credentials: true
+// }))
 
+app.use(cors())
 
 
 app.use(express.json())
