@@ -26,7 +26,7 @@ const SignUp = () => {
 
 
       try{
-        const response =await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/signup`,{email,password})
+        const response =await axios.post(`http://localhost:3000/signup`,{email,password})
 
       if(response.status === 201)
       {
